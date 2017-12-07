@@ -6,7 +6,7 @@ import Clock from './Clock.js'
 import { Grid, Segment, Image, Header, Message } from 'semantic-ui-react'
 
 
-const AuctionDetail = ({auction, onSubmit, handleCreateBid, currentUser, userList}) => {
+const AuctionDetail = ({auction, onSubmit, handleCreateBid, currentUser, userList, refreshBid}) => {
   console.log("AUCTION", auction)
   if(!auction && currentUser) {
     return <div><h1>Welcome {currentUser.user.username}!
@@ -52,6 +52,7 @@ const AuctionDetail = ({auction, onSubmit, handleCreateBid, currentUser, userLis
     <BidWindow
       bids={auction.bids}
       users={userList}
+      refreshBid={refreshBid}
     />
   </Segment>
     </div>

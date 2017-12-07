@@ -3,6 +3,11 @@ import Bid from './Bid.js';
 import { List } from 'semantic-ui-react'
 
 const BidWindow = (props) => {
+
+  const bidReload = props.refreshBid();
+
+
+
   const bidList = props.bids.map((bid) => {
     return(
       <Bid
@@ -14,6 +19,7 @@ const BidWindow = (props) => {
     )
   })
   return (
+    {bidReload},
     <List
       items={bidList}/>
   )
