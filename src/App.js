@@ -144,6 +144,7 @@ filterResults = () => {
       },
     body: JSON.stringify(data)
   })
+  this.fetchAuctions()
   // .catch(res => res.json());
 }
 
