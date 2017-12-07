@@ -65,9 +65,7 @@ componentDidMount(){
           users: res
 
         });
-        console.log(users);
       });
-      console.log(this.state);
   }
 
 login = data => {
@@ -92,13 +90,10 @@ fetchAuctions = () => {
         auctions: res
 
       });
-      console.log(auctions);
     });
-    console.log(this.state);
 }
 
 fetchUser = (userData) => {
-  console.log("fetch user", userData)
   fetch('https://auction-back-end.herokuapp.com/api/v1/login', {
     method: 'POST',
     headers: {
@@ -118,7 +113,6 @@ updateAuctions= () => {
     .then(res => {
       const stateSelected = this.state.selectedAuction;
       const updatedSelected = res.filter(selected => selected.id === stateSelected.id)
-      console.log(updatedSelected[0])
       this.setState({
         selectedAuction: updatedSelected[0]
       });
@@ -162,8 +156,6 @@ createUser = data => {
 }
 
 postBid = (data, auctionId, userId) => {
-  console.log(auctionId)
-  console.log(userId)
   fetch(`https://auction-back-end.herokuapp.com/api/v1/bids`, {
     method: 'POST',
     headers: {
@@ -183,7 +175,6 @@ postBid = (data, auctionId, userId) => {
 
 
 handleCreateAuction = auctionInfo => {
- console.log(auctionInfo);
  this.createAuction(auctionInfo)
  // .then(res => {
  //   console.log('res', res);
@@ -191,7 +182,6 @@ handleCreateAuction = auctionInfo => {
 };
 
 handleCreateUser = userInfo => {
- console.log(userInfo);
  this.createUser(userInfo)
  // .then(res => {
  //   console.log('res', res);
@@ -203,12 +193,11 @@ handleCreateBid = (bidInfo, auctionId, userId) => {
 
 }
 bidRefresh = () => {
-  const myVar = setInterval(this.updateAuctions(), 1000);
+  const myVar = setInterval(this.updateAuctions(), 2000);
 }
 
 
   render() {
-    console.log("APP", this.props)
     if(this.state.auctions.length < 1){
       return <div> LOADING </div>
     }
