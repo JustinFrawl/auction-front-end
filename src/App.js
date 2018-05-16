@@ -88,7 +88,6 @@ fetchAuctions = () => {
       const auctions = res;
       this.setState({
         auctions: res
-
       });
     });
 }
@@ -199,7 +198,7 @@ bidRefresh = () => {
 
   render() {
     if(this.state.auctions.length < 1){
-      return <div> LOADING </div>
+      return <div> LOADING... </div>
     }
     return (
       <div>
