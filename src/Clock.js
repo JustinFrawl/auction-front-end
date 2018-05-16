@@ -66,7 +66,7 @@ class Clock extends React.Component {
         <Header as="h3" block textAlign='center'>
           <div>
                   <Icon name='clock' size='large'/>
-                  Time Remaining
+                  Auction Time Remaining:
                 </div>
         {this.leading0(this.state.days)} Days: {this.leading0(this.state.hours)} Hours {this.leading0(this.state.minutes)} Minutes {this.leading0(this.state.seconds)} Seconds
       </Header>
