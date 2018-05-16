@@ -31,7 +31,7 @@ render() {
       console.log('submitted');
       this.props.handleCreateUser(this.state);
     }}>
-    <h3>Create A New User!</h3>
+    <h3>Create New User!</h3>
       <label>Title</label>
       <input
         type='text'
@@ -50,16 +50,15 @@ render() {
         />
       <input
         type='text'
-        placeholder='How Much Money Do You Have'
+        placeholder='Enter Your Current Amount of Money'
         value={this.state.user.amount}
         name="amount"
         onChange={this.handleChange}
         />
       <button
         type='submit'>
-        Create Your User, then Sign in!
+        Create Your User, then Sign In!
         </button>
-
     </form>
 
   )
