@@ -16,14 +16,14 @@ const Navbar = props => {
       <Link to="/home" className="item">
         <h2 className="ui header">
           <i className={`${props.icon} icon`} />
-          <div className="content">Auctioneer, Mediocrity incarnate!</div>
+          <div className="content">Auctioneer</div>
           <div className="sub header">{props.description}</div>
         </h2>
       </Link>
       <div className="right menu">
         {loggedIn ? (
           <a>Welcome {currentUser.user.username}</a>
-        ) : <a>please sign in</a>}
+        ) : <a>Please sign in</a>}
         {loggedIn ? (
           <a className="item">
             <button
