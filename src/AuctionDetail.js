@@ -7,16 +7,11 @@ import { Grid, Segment, Image, Header, Message } from 'semantic-ui-react'
 
 
 const AuctionDetail = ({auction, onSubmit, handleCreateBid, currentUser, userList, refreshBid}) => {
-  console.log("AUCTION", auction)
   if(!auction && currentUser) {
     return <div><h1>Welcome {currentUser.user.username}!
                   Please Log In and Select an Auction in order to place a bid!</h1>
-
-
     </div>;
   }
-
-
   return(
     <div>
     <div>
